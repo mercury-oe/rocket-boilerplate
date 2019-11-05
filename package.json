@@ -1,0 +1,84 @@
+{
+  "name": "rocket-boilerplate",
+  "version": "0.0.1",
+  "repository": "git@github.com:mercury-oe/rocket-boilerplate.git",
+  "author": "mercury-oe <oleg.ambrosevich@yandex.ru>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "webpack-dev-server --port 8080 -d --config ./tools/webpack/webpack.dev.js",
+    "eslint": "./node_modules/.bin/eslint",
+    "prettier": "./node_modules/.bin/prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx|ts|tsx)": [
+      "npm run prettier",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-redux": "7.1.1",
+    "react-router-dom": "5.1.2",
+    "redux": "4.0.4",
+    "tailwindcss": "1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.0",
+    "@babel/plugin-proposal-decorators": "7.7.0",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0",
+    "@babel/preset-typescript": "7.7.0",
+    "@hot-loader/react-dom": "16.10.2",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.3",
+    "@types/react-redux": "7.1.5",
+    "@types/react-router-dom": "5.1.2",
+    "@typescript-eslint/eslint-plugin": "2.6.1",
+    "@typescript-eslint/parser": "2.6.1",
+    "babel-loader": "8.0.6",
+    "cache-loader": "4.1.0",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "3.2.0",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.2.0",
+    "file-loader": "4.2.0",
+    "fork-ts-checker-webpack-plugin": "1.5.0",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "3.0.9",
+    "lint-staged": "9.4.2",
+    "mini-css-extract-plugin": "0.8.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss-loader": "3.0.0",
+    "prettier": "1.18.2",
+    "purgecss-webpack-plugin": "1.6.0",
+    "react-hot-loader": "4.12.15",
+    "style-loader": "1.0.0",
+    "stylelint": "11.1.1",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-config-prettier": "6.0.0",
+    "stylelint-config-standard": "19.0.0",
+    "terser-webpack-plugin": "2.2.1",
+    "thread-loader": "2.1.3",
+    "typescript": "3.7.2",
+    "url-loader": "2.2.0",
+    "webpack": "4.41.2",
+    "webpack-bundle-analyzer": "3.6.0",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0",
+    "webpack-merge": "4.2.2"
+  }
+}
