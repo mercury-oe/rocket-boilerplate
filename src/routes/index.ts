@@ -5,7 +5,8 @@ import SolarSystemRoute from './solar-system';
 export interface Route {
   pageId: string;
   path: string;
-  component: <P>(props: P) => React.ReactElement;
+  component?: <P>(props: P) => React.ReactElement;
+  layout?: <P>(props: P) => React.ReactElement;
   routes?: Route[];
 }
 
@@ -13,7 +14,7 @@ function createRoutes(): Route {
   return {
     pageId: 'SPACE',
     path: '',
-    component: Space,
+    layout: Space,
     routes: [SolarSystemRoute()],
   };
 }
