@@ -7,7 +7,7 @@
     |-- components
     |-- constants
     |-- modules
-    |-- pages
+    |-- routes
     |-- store
     |-- styles
     |-- utils
